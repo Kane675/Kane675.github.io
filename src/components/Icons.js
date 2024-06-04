@@ -55,7 +55,7 @@ export const LinkedInIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const PinterestIcon = ({ className, ...rest }) => (
+export const ItchIOIcon = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -72,7 +72,7 @@ export const PinterestIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const DribbbleIcon = ({ className, ...rest }) => (
+export const YoutubeIcon = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"

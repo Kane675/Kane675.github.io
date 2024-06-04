@@ -45,16 +45,16 @@ const Skills = () => {
 
         <Skill name="HTML" x="-20vw" y="2vw" />
 
-          <Skill name="CSS" x="-5vw" y="-10vw" />
-          <Skill name="JavaScript" x="20vw" y="6vw" />
-          <Skill name="ReactJS" x="0vw" y="12vw" />
-          <Skill name="NextJS" x="-20vw" y="-15vw" />
-          <Skill name="GatsbyJS" x="15vw" y="-12vw" />
+          <Skill name="C++" x="-5vw" y="-10vw" />
+          <Skill name="C#" x="20vw" y="6vw" />
+          <Skill name="Python" x="0vw" y="12vw" />
+          <Skill name="Javascript" x="-20vw" y="-15vw" />
+          <Skill name="Unity" x="15vw" y="-12vw" />
           <Skill name="Github" x="-35vw" y="-5vw" />
-          <Skill name="Web Design" x="32vw" y="-5vw" />
-          <Skill name="Figma" x="0vw" y="-20vw" />
-          <Skill name="Firebase" x="-25vw" y="18vw" />
-          <Skill name="Tawilwind CSS" x="28vw" y="18vw" />
+          <Skill name="Visual Studio" x="32vw" y="-5vw" />
+          <Skill name="Jet Brains Rider" x="0vw" y="-20vw" />
+          <Skill name="Unreal Engine" x="-25vw" y="18vw" />
+          <Skill name="Microsoft Office" x="28vw" y="18vw" />
     </div></>
   );
 };

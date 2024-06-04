@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
 import {
-  DribbbleIcon,
+  YoutubeIcon,
   GithubIcon,
   LinkedInIcon,
   MoonIcon,
-  PinterestIcon,
+  ItchIOIcon,
   SunIcon,
   TwitterIcon,
 } from "./Icons";
@@ -135,9 +135,9 @@ const Navbar = () => {
           href="#"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
-          aria-label="Checkout my pinterest profile"
+          aria-label="Checkout my ItchIO profile"
         >
-          <PinterestIcon />
+          <ItchIOIcon />
         </motion.a>
         <motion.a
           target={"_blank"}
@@ -145,9 +145,9 @@ const Navbar = () => {
           href="#"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
-          aria-label="Checkout my dribbble profile"
+          aria-label="Checkout my youtube profile"
         >
-          <DribbbleIcon />
+          <YoutubeIcon />
         </motion.a>
 
         <button
@@ -221,9 +221,9 @@ const Navbar = () => {
           href="#"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
-          aria-label="Checkout my pinterest profile"
+          aria-label="Checkout my ItchIO profile"
         >
-          <PinterestIcon />
+          <ItchIOIcon />
         </motion.a>
         <motion.a
           target={"_blank"}
@@ -231,9 +231,9 @@ const Navbar = () => {
           href="#"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
-          aria-label="Checkout my dribbble profile"
+          aria-label="Checkout my youtube profile"
         >
-          <DribbbleIcon />
+          <YoutubeIcon />
         </motion.a>
 
         <button

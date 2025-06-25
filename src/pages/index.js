@@ -14,12 +14,12 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Awesome Portfolio Built with Nextjs</title>
+                <title>Kane Piggott's Portfolio</title>
                 <meta
                     name="description"
-                    content="Explore CodeBucks's Next.js developer portfolio and 
-        discover the latest webapp projects and software engineering articles. 
-        Showcase your skills as a full-stack developer and software engineer."
+                    content="The portfolio of Kane Piggott, 
+        awarded both a bachelor's degree in Games Development and Master's by negotiated study 
+        discover previews of notable projects and links to his socials"
                 />
             </Head>
 
@@ -32,7 +32,7 @@ export default function Home() {
                         <div className="w-1/2 lg:hidden md:inline-block md:w-full">
                             <Image
                                 src={profilePic}
-                                alt="CodeBucks"
+                                alt="KanePiggott"
                                 className="h-auto w-full"
                                 sizes="100vw"
                                 priority
@@ -40,11 +40,15 @@ export default function Home() {
                         </div>
                         <div className="flex w-1/2 flex-col items-center self-center lg:w-full lg:text-center">
                             <AnimatedText
-                                text="Turning vision into reality with code and design."
+                                text="Making Games Think, Not Just Look Good."
                                 className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
                             />
                             <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
-                                As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects and articles, showcasing my expertise in React.js and web development.
+                                I'm a game developer with a Bachelor's in Games Development and a Master's by Negotiated Study, focusing on AI and Procedural Content Generation in games. I specialize in Unreal Engine and C++, with additional experience in C#, Python, and Java.
+
+                                I’m currently developing a Borderlands-inspired indie looter shooter and building tools for the Unreal Fab store as part of my personal development. My recent projects include a LLaMA-based AI dialogue roleplay system, a Boids swarm simulation tool, and a Wave Function Collapse city generator.
+
+                                I'm actively looking for opportunities in the games industry. Have a look at what I’ve been working on — from AI-driven systems to gameplay tools designed for real-world development.
                             </p>
                             <div className="mt-2 flex items-center self-start lg:self-center">
                                 <Link

@@ -38,10 +38,10 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>Minimal Portfolio Built with Nextjs | About Page</title>
-        <meta name="description" content="Learn more about CodeBucks, a Next.js developer with a passion for 
-        creating innovative solutions. Discover tips for building a developer portfolio and insights on 
-        full-stack development, front-end development, and back-end development." />
+              <title>Kane's Game Dev Portfolio | About Page</title>
+              <meta name="description" content="iscover more about Kane, a game developer specializing in Unreal Engine,
+        procedural content generation, and AI systems. Learn about his technical experience,
+        education, and indie development work." />
       </Head>
       <TransitionEffect />
       <main
@@ -60,23 +60,13 @@ export default function About() {
                 BIOGRAPHY
               </h2>
               <p className="font-medium ">
-                Hi, I&apos;m <strong>CodeBucks</strong>, a web developer and
-                UI/UX designer with a passion for creating beautiful,
-                functional, and user-centered digital experiences. With 4 years
-                of experience in the field. I am always looking for new and
-                innovative ways to bring my clients&apos; visions to life.
+                              Hi, I&apos;m <strong>Kane</strong>, a game developer with a strong technical background in gameplay systems, AI, and procedural content generation. I started as a hobbyist and worked my way through a BSc in Games Development and now an MSc focusing on AI and PCG.
               </p>
               <p className="my-4 font-medium">
-                I believe that design is about more than just making things look
-                pretty – it&apos;s about solving problems and creating
-                intuitive, enjoyable experiences for users.
+                              My primary expertise is in Unreal Engine 5 with C++, though I also work with Python, C#, and Unity. I’m currently developing tools for the Unreal Fab marketplace and building an indie Borderlands-inspired looter shooter with a focus on systems-driven and modular design.
               </p>
               <p className="font-medium">
-                Whether I&apos;m working on a website, mobile app, or other
-                digital product, I bring my commitment to design excellence and
-                user-centered thinking to every project I work on. I look
-                forward to the opportunity to bring my skills and passion to
-                your next project.
+                              I’ve led collaborative game projects, participated in game jams, and earned recognition through GradEX for my technical contributions. I’m passionate about designing gameplay that’s not just fun — but built on solid, scalable engineering. I’m currently seeking opportunities in the games industry where I can keep pushing those ideas forward.
               </p>
             </div>
             <div className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark 

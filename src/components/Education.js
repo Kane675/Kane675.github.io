@@ -42,28 +42,28 @@ const Education = () => {
           className="absolute left-9 top-0 w-[4px] md:w-[2px] md:left-[30px] xs:left-[20px] h-full bg-dark  origin-top rounded-full dark:bg-primaryDark dark:shadow-3xl"
           style={{ scaleY: scrollYProgress }}
         />
-        <ul className="w-full flex flex-col items-start justify-between ml-4">
-          <Details
-            type="Bachelor of Science with Honours in Games Development"
-            time="2016-2020"
-            place="Staffordshire University"
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial Intelligence."
-          />
+              <ul className="w-full flex flex-col items-start justify-between ml-4">
+                  <Details
+                      type="MSc Arts and Creative Technologies (Negotiated Study)"
+                      time="2024 – 2025"
+                      place="Staffordshire University"
+                      info="Specialising in Procedural Content Generation and AI for games. Master's project focuses on system design and emergent play. Expected graduation: Autumn 2025."
+                  />
 
-          <Details
-            type=""
-            time=""
-            place=""
-            info=""
-          />
+                  <Details
+                      type="BSc (Hons) Computer Games Development"
+                      time="2021 – 2024"
+                      place="Staffordshire University"
+                      info="Covered core systems programming, gameplay mechanics, engine architecture, and tools development. Final year projects included AI-driven systems and procedural generation."
+                  />
 
-          <Details
-            type=""
-            time=""
-            place=""
-            info=""
-          />
-        </ul>
+                  <Details
+                      type="A-Levels: Maths, Physics, Computer Science"
+                      time="2019 – 2021"
+                      place="Joseph Wright Sixth Form College, Derby"
+                      info="Built a strong foundation in problem-solving, logical thinking, and algorithmic design. Developed an early interest in simulation and game logic."
+                  />
+              </ul>
       </div>
     </div>
   );

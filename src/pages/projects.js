@@ -5,15 +5,102 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import proj1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
-import proj2 from "../../public/images/projects/nft-collection-website-cover-image.jpg";
-import proj3 from "../../public/images/projects/fashion-studio-website.jpg";
-import proj4 from "../../public/images/projects/portfolio-cover-image.jpg";
-import proj5 from "../../public/images/projects/agency-website-cover-image.jpg";
-import proj6 from "../../public/images/projects/devdreaming.jpg";
+
+// Project Images
+import indie1 from "../../public/images/projects/Indie/LockNLoot1.jpg";
+import indie2 from "../../public/images/projects/Indie/LockNLoot2.jpg";
+import gradexImg from "../../public/images/projects/GradEX2025.png";
+import boids1 from "../../public/images/projects/Boids/Fish1.png";
+import boids2 from "../../public/images/projects/Boids/Fish2.png";
+import boids3 from "../../public/images/projects/Boids/Fish3.png";
+import city1 from "../../public/images/projects/WFC/CityGen1.png";
+import city2 from "../../public/images/projects/WFC/CityGen2.png";
+import city3 from "../../public/images/projects/WFC/CityGen3.png";
+import groupProjectImg from "../../public/images/projects/SpectralMoversArt.jpg";
+import weapon1 from "../../public/images/projects/Weapon/WGen1.png";
+import weapon2 from "../../public/images/projects/Weapon/WGen2.png";
+import weapon3 from "../../public/images/projects/Weapon/WGen3.png";
+import weapon4 from "../../public/images/projects/Weapon/WGen4.png";
+import marioImg from "../../public/images/projects/SpaceBros.jpg";
+import mobileGamesImg from "../../public/images/projects/mobile-games.jpg";
 import TransitionEffect from "@/components/TransitionEffect";
 
+import { useKeenSlider } from "keen-slider/react";
+import { useEffect, useRef, useState } from "react";
+
+
 const FramerImage = motion(Image);
+
+
+const CarouselImage = ({ images, alt }) => {
+    const sliderRef = useRef(null);
+    const [sliderInstanceRef, setSliderInstanceRef] = useState(null);
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    useKeenSlider(
+        sliderRef,
+        {
+            loop: true,
+            slides: {
+                perView: 1,
+            },
+            slideChanged(slider) {
+                setCurrentSlide(slider.track.details.rel);
+            },
+            created(slider) {
+                setSliderInstanceRef(slider);
+            },
+        },
+        []
+    );
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (sliderInstanceRef) {
+                sliderInstanceRef.next();
+            }
+        }, 4000);
+
+        return () => clearInterval(interval);
+    }, [sliderInstanceRef]);
+
+    return (
+        <div className="relative w-full">
+            <div ref={sliderRef} className="keen-slider aspect-video overflow-hidden rounded-lg">
+                {images.map((img, i) => (
+                    <div key={i} className="keen-slider__slide">
+                        <div className="relative w-full h-0 pb-[56.25%]"> {/* Maintain 16:9 aspect */}
+                            <FramerImage
+                                src={img}
+                                alt={`${alt} image ${i + 1}`}
+                                fill
+                                className="object-cover rounded-lg"
+                                whileHover={{ scale: 1.05 }}
+                                transition={{ duration: 0.2 }}
+                                priority={i === 0}
+                            />
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            <div className="mt-3 flex justify-center gap-2">
+                {images.map((_, idx) => (
+                    <button
+                        key={idx}
+                        onClick={() => sliderInstanceRef?.moveToIdx(idx)}
+                        className={`h-2 w-2 rounded-full transition-all duration-300 ${currentSlide === idx ? "bg-dark dark:bg-light" : "bg-gray-400"
+                            }`}
+                        aria-label={`Go to slide ${idx + 1}`}
+                    />
+                ))}
+            </div>
+        </div>
+    );
+};
+
+export { CarouselImage };
+
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
@@ -89,157 +176,159 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
   );
 };
 
-const Project = ({ title, type, img, link, github }) => {
+const Project = ({ title, type, images, isPortrait, isCarousel, link, github }) => {
+    return (
+        <article className="relative flex w-full flex-col items-center justify-center rounded-2xl rounded-br-2xl border border-solid border-dark bg-light p-6 shadow-2xl dark:border-light dark:bg-dark xs:p-4">
+            <div className="absolute top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]" />
 
-  return (
-    <article
-      className="relative flex w-full flex-col items-center justify-center rounded-2xl  rounded-br-2xl 
-      border  border-solid  border-dark bg-light p-6  shadow-2xl dark:border-light dark:bg-dark 
-      xs:p-4
-      "
-    >
-      <div
-        className="absolute  top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark
-         dark:bg-light  md:-right-2 md:w-[101%] xs:h-[102%]
-        xs:rounded-[1.5rem]  "
-      />
+            <Link href={link} target="_blank" className="w-full cursor-pointer overflow-hidden rounded-lg">
+                {isCarousel ? (
+                    <CarouselImage images={images} alt={title} />
+                ) : (
+                    <div
+                        className={`relative w-full overflow-hidden rounded-lg ${isPortrait ? "aspect-[3/4]" : "aspect-video"
+                            }`}
+                    >
+                        <FramerImage
+                            src={images[0]}
+                            alt={title}
+                            fill
+                            className="object-cover"
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 0.2 }}
+                        />
+                    </div>
+                )}
+            </Link>
 
-      <Link
-        href={link}
-        target={"_blank"}
-        className="w-full cursor-pointer overflow-hidden rounded-lg"
-      >
-        <FramerImage
-          src={img}
-          alt={title}
-          className="h-auto w-full"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.2 }}
-          sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
-        />
-      </Link>
-      <div className="mt-4 flex w-full flex-col items-start justify-between">
-        <span className="text-xl font-medium text-primary dark:text-primaryDark lg:text-lg md:text-base">
-          {type}
-        </span>
+            <div className="mt-4 flex w-full flex-col items-start justify-between">
+                <span className="text-xl font-medium text-primary dark:text-primaryDark lg:text-lg md:text-base">
+                    {type}
+                </span>
 
-        <Link
-          href={link}
-          target={"_blank"}
-          className="underline-offset-2 hover:underline"
-        >
-          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl ">
-            {title}
-          </h2>
-        </Link>
-        <div className="flex w-full items-center  justify-between">
-          <Link
-            href={link}
-            target={"_blank"}
-            className="rounded text-lg
-            font-medium underline md:text-base
-            "
-            aria-label={title}
-          >
-            Visit
-          </Link>
-          <Link
-            href={github}
-            target={"_blank"}
-            className="w-8 md:w-6"
-            aria-label={title}
-          >
-            <GithubIcon />
-          </Link>
-        </div>
-      </div>
-    </article>
-  );
+                <Link href={link} target="_blank" className="underline-offset-2 hover:underline">
+                    <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl ">{title}</h2>
+                </Link>
+
+                <div className="flex w-full items-center justify-between">
+                    <Link href={link} target="_blank" className="rounded text-lg font-medium underline md:text-base">
+                        Visit
+                    </Link>
+                    <Link href={github} target="_blank" className="w-8 md:w-6" aria-label={title}>
+                        <GithubIcon />
+                    </Link>
+                </div>
+            </div>
+        </article>
+    );
 };
 
 export default function Projects() {
-  return (
-    <>
-      <Head>
-        <title>Modern Portfolio Built with Nextjs | Projects Page</title>
-        <meta
-          name="description"
-          content="Discover the latest webapp projects created by CodeBucks, a Next.js developer with 
-        expertise in React.js and full-stack development. Browse software engineering articles and tutorials for tips on creating your own portfolio."
-        />
-      </Head>
+    return (
+        <>
+            <Head>
+                <title>Modern Portfolio | Projects Page</title>
+                <meta
+                    name="description"
+                    content="Showcasing game dev and software engineering projects including procedural generation, AI, and more."
+                />
+            </Head>
 
-      <TransitionEffect />
-      <main
-        className={`mb-16  flex w-full flex-col items-center justify-center dark:text-light`}
-      >
-        <Layout className="pt-16">
-          <AnimatedText
-            text="Imagination Trumps Knowledge!"
-            className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
-          />
-          <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
-            <div className="col-span-12">
-              <FeaturedProject
-                type="Featured Project"
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency."
-                img={proj1}
-                link="https://devdreaming.com/videos/build-crypto-screener-app-with-react-tailwind-css"
-                github="https://github.com/codebucks27/CryptoBucks-Final-Code"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Website Template"
-                title="NFT collection Website"
-                img={proj2}
-                link="https://devdreaming.com/videos/create-nft-collection-website-reactjs"
-                github="https://github.com/codebucks27/The-Weirdos-NFT-Website-Starter-Code"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Website"
-                title="Fashion Studio Website"
-                img={proj3}
-                link="https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap"
-                github="https://github.com/codebucks27/wibe-studio"
-              />
-            </div>
-            <div className="col-span-12">
-              <FeaturedProject
-                type="Portfolio Website"
-                title="React Portfolio Website"
-                summary="A professional portfolio website using React JS, Framer-motion, and Styled-components. It has smooth page transitions, cool background effects, unique design and it is mobile responsive."
-                img={proj4}
-                link="https://devdreaming.com/videos/build-stunning-portfolio-website-react-js-framer-motion"
-                github="https://github.com/codebucks27/react-portfolio-final"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Website Template"
-                img={proj5}
-                title="Agency Website Template"
-                link="https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap"
-                github="https://github.com/codebucks27/wibe-studio"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Blog Website"
-                img={proj6}
-                title="DevDreaming"
-                link="https://devdreaming.com"
-                github="https://github.com/codebucks27"
-              />
-            </div>
-          </div>
-        </Layout>
-      </main>
-    </>
-  );
+            <TransitionEffect />
+            <main className={`mb-16 flex w-full flex-col items-center justify-center dark:text-light`}>
+                <Layout className="pt-16">
+                    <AnimatedText
+                        text="Imagination Trumps Knowledge!"
+                        className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
+                    />
+                    <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+                        <div className="col-span-6 sm:col-span-12">
+                            <Project
+                                type="Game Project"
+                                title="Indie Development"
+                                images={[indie1, indie2]}
+                                isCarousel
+                                link="#"
+                                github="#"
+                            />
+                        </div>
+
+                        <div className="col-span-6 sm:col-span-12">
+                            <Project
+                                type="Exhibition Work"
+                                title="GradEX"
+                                images={[gradexImg]}
+                                isPortrait
+                                link="#"
+                                github="#"
+                            />
+                        </div>
+
+                        <div className="col-span-6 sm:col-span-12">
+                            <Project
+                                type="AI Simulation"
+                                title="Boids"
+                                images={[boids1, boids2, boids3]}
+                                isCarousel
+                                link="#"
+                                github="#"
+                            />
+                        </div>
+
+                        <div className="col-span-6 sm:col-span-12">
+                            <Project
+                                type="Procedural Generation"
+                                title="CityGen"
+                                images={[city1, city2, city3]}
+                                isCarousel
+                                link="#"
+                                github="#"
+                            />
+                        </div>
+
+                        <div className="col-span-6 sm:col-span-12">
+                            <Project
+                                type="Team Collaboration"
+                                title="Group Project"
+                                images={[groupProjectImg]}
+                                link="#"
+                                github="#"
+                            />
+                        </div>
+
+                        <div className="col-span-6 sm:col-span-12">
+                            <Project
+                                type="Weapon System"
+                                title="Weapon Gen Prototype"
+                                images={[weapon1, weapon2, weapon3, weapon4]}
+                                isCarousel
+                                link="#"
+                                github="#"
+                            />
+                        </div>
+
+                        <div className="col-span-6 sm:col-span-12">
+                            <Project
+                                type="Remake"
+                                title="Mario Clone"
+                                images={[marioImg]}
+                                link="#"
+                                github="#"
+                            />
+                        </div>
+
+                        <div className="col-span-6 sm:col-span-12">
+                            <Project
+                                type="Mobile Portfolio"
+                                title="Mobile Games"
+                                images={[mobileGamesImg]}
+                                link="#"
+                                github="#"
+                            />
+                        </div>
+                    </div>
+                </Layout>
+            </main>
+        </>
+    );
 }

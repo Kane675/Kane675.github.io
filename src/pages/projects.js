@@ -7,22 +7,22 @@ import Image from "next/image";
 import Link from "next/link";
 
 // Project Images
-import indie1 from "../../public/images/projects/Indie/LockNLoot1.jpg";
-import indie2 from "../../public/images/projects/Indie/LockNLoot2.jpg";
-import gradexImg from "../../public/images/projects/GradEX2025.png";
-import boids1 from "../../public/images/projects/Boids/Fish1.png";
-import boids2 from "../../public/images/projects/Boids/Fish2.png";
-import boids3 from "../../public/images/projects/Boids/Fish3.png";
-import city1 from "../../public/images/projects/WFC/CityGen1.png";
-import city2 from "../../public/images/projects/WFC/CityGen2.png";
-import city3 from "../../public/images/projects/WFC/CityGen3.png";
-import groupProjectImg from "../../public/images/projects/SpectralMoversArt.jpg";
-import weapon1 from "../../public/images/projects/Weapon/WGen1.png";
-import weapon2 from "../../public/images/projects/Weapon/WGen2.png";
-import weapon3 from "../../public/images/projects/Weapon/WGen3.png";
-import weapon4 from "../../public/images/projects/Weapon/WGen4.png";
-import marioImg from "../../public/images/projects/SpaceBros.jpg";
-import mobileGamesImg from "../../public/images/projects/mobile-games.png";
+import indie1 from "@/images/projects/Indie/LockNLoot1.jpg";
+import indie2 from "@/images/projects/Indie/LockNLoot2.jpg";
+import gradexImg from "@/images/projects/GradEX2025.png";
+import boids1 from "@/images/projects/Boids/Fish1.png";
+import boids2 from "@/images/projects/Boids/Fish2.png";
+import boids3 from "@/images/projects/Boids/Fish3.png";
+import city1 from "@/images/projects/WFC/CityGen1.png";
+import city2 from "@/images/projects/WFC/CityGen2.png";
+import city3 from "@/images/projects/WFC/CityGen3.png";
+import groupProjectImg from "@/images/projects/SpectralMoversArt.jpg";
+import weapon1 from "@/images/projects/Weapon/WGen1.png";
+import weapon2 from "@/images/projects/Weapon/WGen2.png";
+import weapon3 from "@/images/projects/Weapon/WGen3.png";
+import weapon4 from "@/images/projects/Weapon/WGen4.png";
+import marioImg from "@/images/projects/SpaceBros.jpg";
+import mobileGamesImg from "@/images/projects/mobile-games.png";
 import TransitionEffect from "@/components/TransitionEffect";
 
 import { useKeenSlider } from "keen-slider/react";

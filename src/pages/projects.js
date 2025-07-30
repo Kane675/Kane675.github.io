@@ -22,7 +22,7 @@ import weapon2 from "../../public/images/projects/Weapon/WGen2.png";
 import weapon3 from "../../public/images/projects/Weapon/WGen3.png";
 import weapon4 from "../../public/images/projects/Weapon/WGen4.png";
 import marioImg from "../../public/images/projects/SpaceBros.jpg";
-import mobileGamesImg from "../../public/images/projects/mobile-games.jpg";
+import mobileGamesImg from "../../public/images/projects/mobile-games.png";
 import TransitionEffect from "@/components/TransitionEffect";
 
 import { useKeenSlider } from "keen-slider/react";
@@ -238,7 +238,7 @@ export default function Projects() {
             <main className={`mb-16 flex w-full flex-col items-center justify-center dark:text-light`}>
                 <Layout className="pt-16">
                     <AnimatedText
-                        text="Imagination Trumps Knowledge!"
+                        text="My Projects!"
                         className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
                     />
                     <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">

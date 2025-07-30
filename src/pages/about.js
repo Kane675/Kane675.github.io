@@ -39,7 +39,7 @@ export default function About() {
     <>
       <Head>
               <title>Kane's Game Dev Portfolio | About Page</title>
-              <meta name="description" content="iscover more about Kane, a game developer specializing in Unreal Engine,
+              <meta name="description" content="Discover more about Kane, a game developer specializing in Unreal Engine,
         procedural content generation, and AI systems. Learn about his technical experience,
         education, and indie development work." />
       </Head>
@@ -49,7 +49,7 @@ export default function About() {
       >
         <Layout className="pt-16">
           <AnimatedText
-            text="Passion Fuels Purpose!"
+            text="About Me!"
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
 
@@ -81,49 +81,49 @@ export default function About() {
               <Image
                 className="h-auto w-full rounded-2xl"
                 src={profile}
-                alt="Codebucks"
+                alt="Kane"
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
                 priority
               />
             </div>
-            <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row 
-            xl:items-center md:order-3">
-              <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={40} />+
-                </span>
-                <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
-                xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  satisfied clients
-                </h2>
-              </div>
+            {/*<div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row */}
+            {/*xl:items-center md:order-3">*/}
+            {/*  <div className="flex flex-col items-end justify-center xl:items-center">*/}
+            {/*    <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">*/}
+            {/*      <AnimatedNumberFramerMotion value={40} />+*/}
+            {/*    </span>*/}
+            {/*    <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 */}
+            {/*    xl:text-center md:text-lg sm:text-base xs:text-sm">*/}
+            {/*      satisfied clients*/}
+            {/*    </h2>*/}
+            {/*  </div>*/}
 
-              <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={50} />+
-                </span>
-                <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
-                xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  projects completed
-                </h2>
-              </div>
+            {/*  <div className="flex flex-col items-end justify-center xl:items-center">*/}
+            {/*    <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">*/}
+            {/*      <AnimatedNumberFramerMotion value={50} />+*/}
+            {/*    </span>*/}
+            {/*    <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 */}
+            {/*    xl:text-center md:text-lg sm:text-base xs:text-sm">*/}
+            {/*      projects completed*/}
+            {/*    </h2>*/}
+            {/*  </div>*/}
 
-              <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={4} />+
-                </span>
-                <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
-                xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  Years of experience
-                </h2>
-              </div>
-            </div>
+            {/*  <div className="flex flex-col items-end justify-center xl:items-center">*/}
+            {/*    <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">*/}
+            {/*      <AnimatedNumberFramerMotion value={4} />+*/}
+            {/*    </span>*/}
+            {/*    <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 */}
+            {/*    xl:text-center md:text-lg sm:text-base xs:text-sm">*/}
+            {/*      Years of experience*/}
+            {/*    </h2>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
           </div>
 
           <Skills />
-          <Experience />
+          {/*<Experience />*/}
           <Education />
         </Layout>
       </main>

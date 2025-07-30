@@ -12,20 +12,20 @@ const Footer = () => {
             <Layout className="py-8 flex items-center justify-between lg:flex-col lg:gap-4">
                 <span>{new Date().getFullYear()} &copy; Kane675 — Game Developer Portfolio</span>
 
-                <div className="flex items-center">
-                    Built with{" "}
-                    <span className="text-primary text-2xl px-1 dark:text-primaryDark">
-                        &#9825;
-                    </span>
-                    by{" "}
-                    <Link
-                        href="https://github.com/Kane675"
-                        target="_blank"
-                        className="underline underline-offset-2 pl-1"
-                    >
-                        Kane
-                    </Link>
-                </div>
+                {/*<div className="flex items-center">*/}
+                {/*    Built with{" "}*/}
+                {/*    <span className="text-primary text-2xl px-1 dark:text-primaryDark">*/}
+                {/*        &#9825;*/}
+                {/*    </span>*/}
+                {/*    by{" "}*/}
+                {/*    <Link*/}
+                {/*        href="https://github.com/Kane675"*/}
+                {/*        target="_blank"*/}
+                {/*        className="underline underline-offset-2 pl-1"*/}
+                {/*    >*/}
+                {/*        Kane*/}
+                {/*    </Link>*/}
+                {/*</div>*/}
 
                 <div className="flex gap-4">
                     <Link

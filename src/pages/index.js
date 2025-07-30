@@ -9,16 +9,15 @@ import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import profilePic from "../../public/images/profile/developer-pic-1.png";
 import TransitionEffect from "@/components/TransitionEffect";
 
-
 export default function Home() {
     return (
         <>
             <Head>
-                <title>Kane Piggott's Portfolio</title>
+                <title>Kane Piggott&rsquo;s Portfolio</title>
                 <meta
                     name="description"
                     content="The portfolio of Kane Piggott, 
-        awarded both a bachelor's degree in Games Development and Master's by negotiated study 
+        awarded both a bachelor&#39;s degree in Games Development and Master&#39;s by negotiated study 
         discover previews of notable projects and links to his socials"
                 />
             </Head>
@@ -44,11 +43,11 @@ export default function Home() {
                                 className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
                             />
                             <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
-                                I'm a game developer with a Bachelor's in Games Development and a Master's by Negotiated Study, focusing on AI and Procedural Content Generation in games. I specialize in Unreal Engine and C++, with additional experience in C#, Python, and Java.
+                                I&#39;m a game developer with a Bachelor&#39;s in Games Development and a Master&#39;s by Negotiated Study, focusing on AI and Procedural Content Generation in games. I specialize in Unreal Engine and C++, with additional experience in C#, Python, and Java.
 
-                                I’m currently developing a Borderlands-inspired indie looter shooter and building tools for the Unreal Fab store as part of my personal development. My recent projects include a LLaMA-based AI dialogue roleplay system, a Boids swarm simulation tool, and a Wave Function Collapse city generator.
+                                I&#39;m currently developing a Borderlands-inspired indie looter shooter and building tools for the Unreal Fab store as part of my personal development. My recent projects include a LLaMA-based AI dialogue roleplay system, a Boids swarm simulation tool, and a Wave Function Collapse city generator.
 
-                                I'm actively looking for opportunities in the games industry. Have a look at what I’ve been working on — from AI-driven systems to gameplay tools designed for real-world development.
+                                I&#39;m actively looking for opportunities in the games industry. Have a look at what I&rsquo;ve been working on — from AI-driven systems to gameplay tools designed for real-world development.
                             </p>
                             <div className="mt-2 flex items-center self-start lg:self-center">
                                 <Link

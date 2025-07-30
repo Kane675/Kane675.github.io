@@ -7,22 +7,22 @@ import Image from "next/image";
 import Link from "next/link";
 
 // Project Images
-import indie1 from "@/images/projects/indie/indie1.jpg";
-import indie2 from "@/images/projects/indie/indie2.jpg";
-import gradexImg from "@/images/projects/GradEX2025.png";
-import boids1 from "@/images/projects/boids/fish1.png";
-import boids2 from "@/images/projects/boids/fish2.png";
-import boids3 from "@/images/projects/boids/fish3.png";
-import city1 from "@/images/projects/wfc/citygen1.png";
-import city2 from "@/images/projects/wfc/citygen2.png";
-import city3 from "@/images/projects/wfc/citygen3.png";
-import groupProjectImg from "@/images/projects/SpectralMoversArt.jpg";
-import weapon1 from "@/images/projects/weapon/gen1.png";
-import weapon2 from "@/images/projects/weapon/gen2.png";
-import weapon3 from "@/images/projects/weapon/gen3.png";
-import weapon4 from "@/images/projects/weapon/gen4.png";
-import marioImg from "@/images/projects/SpaceBros.jpg";
-import mobileGamesImg from "@/images/projects/mobile-games.png";
+import indie1 from "../images/projects/indie/indie1.jpg";
+import indie2 from "../images/projects/indie/indie2.jpg";
+import gradexImg from "../images/projects/GradEX2025.png";
+import boids1 from "../images/projects/boids/fish1.png";
+import boids2 from "../images/projects/boids/fish2.png";
+import boids3 from "../images/projects/boids/fish3.png";
+import city1 from "../images/projects/wfc/citygen1.png";
+import city2 from "../images/projects/wfc/citygen2.png";
+import city3 from "../images/projects/wfc/citygen3.png";
+import groupProjectImg from "../images/projects/SpectralMoversArt.jpg";
+import weapon1 from "../images/projects/weapon/gen1.png";
+import weapon2 from "../images/projects/weapon/gen2.png";
+import weapon3 from "../images/projects/weapon/gen3.png";
+import weapon4 from "../images/projects/weapon/gen4.png";
+import marioImg from "../images/projects/SpaceBros.jpg";
+import mobileGamesImg from "../images/projects/mobile-games.png";
 import TransitionEffect from "@/components/TransitionEffect";
 
 import { useKeenSlider } from "keen-slider/react";
